@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Gastos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Registro de Gastos Personales</h1>
+
+        <form id="expense-form">
+            <label for="description">Descripción:</label>
+            <input type="text" id="description-input" required>
+
+            <label for="amount">Monto:</label>
+            <input type="number" id="amount-input" step="0.01" required>
+
+            <label for="category">Categoría:</label>
+            <select id="category-input" required>
+                <option value="">Seleccione una categoría</option>
+                <option value="Comida">Comida</option>
+                <option value="Transporte">Transporte</option>
+                <option value="Entretenimiento">Entretenimiento</option>
+                <option value="Servicios">Servicios</option>
+                <option value="Otros">Otros</option>
+            </select>
+
+            <button type="submit">Agregar Gasto</button>
+        </form>
+
+        <h2>Listado de Gastos</h2>
+
+        <table id="expense-table">
+            <thead>
+                <tr>
+                    <th>Descripción</th>
+                    <th>Monto</th>
+                    <th>Categoría</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="expense-list">
+                </tbody>
+        </table>
+
+        <div class="total">
+            <strong>Total Acumulado:</strong> <span id="total-amount">0.00</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
